@@ -8,3 +8,6 @@ python3.11 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 pip install black ruff pre-commit
+
+/data/raw /data/bronze /data/silver /data/gold
+/src /sql /tests /notebooks /pipelines /docs /docs_assets
