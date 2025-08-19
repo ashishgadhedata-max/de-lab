@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.env
+.env.*
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Data (keep tiny samples only)
+data/raw/*
+!data/raw/.gitkeep
+data/bronze/
+data/silver/
+data/gold/
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
