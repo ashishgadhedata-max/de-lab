@@ -1,38 +1,39 @@
 # DE Lab (Medallion Playground)
 
-Hands-on practice for a modern data-engineering stack (SQL, Python, PySpark, Medallion).
+Hands-on practice for building a modern **data engineering stack** with  
+SQL • Python • PySpark • Medallion architecture.
 
-## How to run locally (later on your Mac)
-```bash
-python3.11 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-pip install black ruff pre-commit
+---
 
-/data/raw /data/bronze /data/silver /data/gold
-/src /sql /tests /notebooks /pipelines /docs /docs_assets
+## 📂 Repo Structure
 
-# E) (Nice to have) Automated linting in GitHub (acts like pre-commit)
-This runs **Black** and **Ruff** on every push in the cloud (no setup on your laptop yet).
+/data/raw → Raw sample CSVs (customers, products, orders)
+/data/bronze → Ingested data (cleaned)
+/data/silver → Transformed data (joins, enrichments)
+/data/gold → Analytics-ready tables
+/src → Python / PySpark code
+/sql → SQL scripts (queries, transformations)
+/tests → Unit tests or data checks
+/notebooks → Jupyter notebooks
+/pipelines → Orchestration flows (Prefect/Airflow style later)
+/docs → Documentation (data models, runbooks, sprint notes)
+/docs_assets → Images, screenshots, exported query results
 
-1) **Add file → Create new file**  
-2) **Name:** `.github/workflows/lint.yml`  
-3) Paste:
-```yaml
-name: Lint
+## 🗓️ Progress Tracker
 
-on:
-  push:
-  pull_request:
+- **Week 0 – Setup**
+  - ✅ Installed Python 3.11, VS Code, Git
+  - ✅ Created repo & folder structure
+  - ✅ Added `.gitignore`, README
+  - ✅ Setup virtual environment (venv)
+  - ✅ Added pre-commit (Black + Ruff)
 
-jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - run: pip install black ruff
-      - run: black --check .
-      - run: ruff check .
+- **Week 1 – Foundations**
+  - ✅ **Day 1 – Scrum + Repo Hygiene**
+    - README.md with project description
+    - Virtual environment + linting tools
+    - Pre-commit hooks setup
+  - ✅ **Day 2 – Data Modelling Basics**
+    - Added `/docs/DataModel.md`
+    - Defined **DimCustomer, DimProduct, DimDate, FactSales**
+    - Documented star schema, keys, grain, and facts
