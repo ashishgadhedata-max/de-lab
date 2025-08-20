@@ -37,3 +37,6 @@ SQL • Python • PySpark • Medallion architecture.
     - Added `/docs/DataModel.md`
     - Defined **DimCustomer, DimProduct, DimDate, FactSales**
     - Documented star schema, keys, grain, and facts
+  - ✅ **Day 3 – SQL Basics
+    - Added `sql/01_basics.sql` with 10 practice queries
+    - Saved outputs in `/docs_assets/sql_basics/`
